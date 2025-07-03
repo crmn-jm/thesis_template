@@ -1,4 +1,10 @@
-# Thesis template used in the thesis entitled: Enhancing diagnostic accuracy in neuroimaging through machine learning: advancements in statistical classification and mapping
+# Thesis template 
+This repository contains the LaTeX template used for writing and defending my PhD thesis (pdf included). It was designed to provide a clean, professional, and structured format for academic theses.
+
+If you use or adapt it, please credit this repository by including a short mention in your acknowledgements or documentation. 
+"This document is based on the LaTeX template developed by C. Jiménez-Mesa, available at https://github.com/crmn-jm/thesis_template/"
+
+# Enhancing diagnostic accuracy in neuroimaging through machine learning: advancements in statistical classification and mapping
 A PhD thesis by Carmen Jiménez-Mesa
 
 # Abstract
