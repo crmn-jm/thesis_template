@@ -1,0 +1,145 @@
+%*******************************************************
+% Table of Contents
+%*******************************************************
+%\phantomsection
+\refstepcounter{dummy}
+\pdfbookmark[0]{\contentsname}{tableofcontents}
+\setcounter{tocdepth}{2} % <-- 2 includes up to subsections in the ToC
+\setcounter{secnumdepth}{3} % <-- 3 numbers up to subsubsections
+\manualmark
+\markboth{\spacedlowsmallcaps{\contentsname}}{\spacedlowsmallcaps{\contentsname}}
+\tableofcontents 
+\automark[section]{chapter}
+\renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\enspace\spacedlowsmallcaps{#1}}}
+%*******************************************************
+% List of Figures and of the Tables
+%*******************************************************
+\clearpage
+
+\begingroup 
+%    \let\clearpage\relax
+%    \let\cleardoublepage\relax
+%    \let\cleardoublepage\relax
+    %*******************************************************
+    % List of Figures
+    %*******************************************************    
+    %\phantomsection 
+    \refstepcounter{dummy}
+    %\addcontentsline{toc}{chapter}{\listfigurename}
+    \pdfbookmark[0]{\listfigurename}{lof}
+    \listoffigures
+
+    \vspace{8ex}
+
+    %*******************************************************
+    % List of Tables
+    %*******************************************************
+    %\phantomsection 
+    \refstepcounter{dummy}
+    %\addcontentsline{toc}{chapter}{\listtablename}
+    \pdfbookmark[0]{\listtablename}{lot}
+    \listoftables
+        
+    \vspace{8ex}
+%   \newpage
+    
+    %*******************************************************
+    % List of Listings
+    %*******************************************************      
+      %\phantomsection 
+%    \refstepcounter{dummy}
+%    %\addcontentsline{toc}{chapter}{\lstlistlistingname}
+%    \pdfbookmark[1]{\lstlistlistingname}{lol}
+%    \lstlistoflistings 
+%
+%    \vspace{8ex}
+       
+    %*******************************************************
+    % Acronyms
+    %*******************************************************
+    %\phantomsection 
+    \refstepcounter{dummy}
+    \pdfbookmark[0]{Acronyms}{acronyms}
+    \markboth{\spacedlowsmallcaps{Acronyms}}{\spacedlowsmallcaps{Acronyms}}
+    \chapter*{Acronyms}
+    \begin{acronym}[MRC-AIMS] % Longest acronym 
+    	\acro{AAL}{Automated Anatomical Labeling}
+    	\acro{AC}{Anterior Commissure}
+    	\acro{AD}{Alzheimer's Disease}
+    	\acro{ADNI}{Alzheimer's Disease Neuroimaging Initiative}
+    	\acro{ANOVA}{Analysis Of Variance}
+    	\acro{ASD}{Autism Spectrum Disorder}
+    	\acro{CAD}{Computer Aided Diagnosis}
+    	\acro{CBM}{Component Based Morphometry}
+    	\acro{CDF}{Cumulative Density Function}
+    	\acro{CSF}{cerebro-spinal fluid}
+    	\acro{CT}{Computed Tomography}
+    	\acro{CTL}{Control Subject}
+    	\acro{CV}{Cross-validation}
+    	\acro{DAT}{Do\-pa\-mi\-ne Trans\-por\-ters}
+    	\acro{DTI}{Diffusion Tensor Imaging}
+    	\acro{EM}{Expectation-Maximization}
+    	\acro{EVD}{eigen-value decomposition}
+    	\acro{FA}{Factor Analysis}
+    	\acro{GLCM}{Grey Level Co-occurrence Matrix}
+    	\acro{GLM}{General Linear Model}
+    	\acro{GM}{grey matter}
+    	\acro{FBP}{Filtered Back Projection}
+    	\acro{FDR}{False Discovery Rate}
+    	\acro{fMRI}{functional \acs{MRI}}
+    	\acro{FN}{False Negative}
+    	\acro{FP}{False Positive}
+    	\acro{FWE}{Family Wise Error rate}
+    	\acro{HMM}{Hidden Markov Model}
+    	\acrodefplural{HMM}{Hidden Markov Models}
+    	\acro{ICA}{Independent Component Analysis}
+    	\acro{KDE}{Kernel Density Estimation}
+    	\acro{KL}{Kullback-Leibler}
+    	\acro{LBP}{Local Binary Patterns}
+    	\acro{LOO}{Leave-One-Out}
+    	\acro{MCI}{Mild Cognitive Impairment}
+    	\acro{MNI}{Montreal Neurological Institute}
+    	\acro{MRC-AIMS}{Medical Research Council Autism Imaging Multicentre Study}
+    	\acro{MRI}{Magnetic Resonance Imaging}
+    	\acro{MVN}{Multivariate Normal distribution}
+    	\acro{MWW}{Mann-Whitney-Wilcoxon}
+	    \acro{PCA}{Principal Component Analysis}
+	    \acro{PD}{Parkinson's Disease}
+	    \acro{PET}{Positron Emission Tomography}
+	    \acro{PDF}{Probability Density Function}
+	    \acro{PKS}{Parkinsonism}
+	    \acro{PLS}{Partial Least Squares}
+	    \acro{PPMI}{Parkinson's Progression Markers Initiative}
+	    \acro{qT1}{quantitative T1 - weighted}
+	    \acro{qT2}{quantitative T2 - weighted}
+	    \acro{RBF}{Radial Basis Function}
+	    \acro{rCBF}{regional Cerebral Blood Flow}
+	    \acro{RF}{radiofrequency}
+	    \acro{ROC}{Receiver Operating Characteristics}
+	    \acro{ROI}{Region of Interest}
+	    \acrodefplural{ROI}{Regions of Interest}
+	    \acro{SBM}{Spherical Brain Mapping}
+	    \acro{SNR}{Signal-To-Noise Ratio}
+	    \acro{SPM}{Statistical Parametric Mapping}
+	    \acro{SPM8}{Statistical Parametric Mapping Software, version 8}
+	    \acro{SPECT}{Single Photon Emission Computed Tomography}
+	    \acro{SVA}{Surrogate Variable Analysis}
+	    \acro{SVC}{Support Vector Classifier}
+	    \acrodefplural{SVC}{Support Vector Classifiers}
+	    \acro{SVD}{Singular Value Decomposition}
+	    \acro{SVM}{Support Vector Machine}
+	    \acrodefplural{SVM}{Support Vector Machines}
+	    \acro{SWEDD}{subjects without evidence of dopaminergic deficit}
+	    \acro{SWPCA}{Significance Weighted Principal Component Analysis}
+	    \acro{synT1}{simulated T1 - weighted Inversion Recovery}
+	    \acro{TN}{True Negative}
+	    \acro{TP}{True Positive}
+	    \acro{VAF}{Voxels As Features}
+	    \acro{VBM}{Voxel Based Morphometry}
+	    \acro{VDLN}{Virgen de las Nieves Hospital}
+	    \acro{VDLV}{Virgen de la Victoria Hospital}
+	    \acro{VRLBP}{Volumetric Radial \acs{LBP}}
+	    \acro{WM}{white matter}
+    \end{acronym}                     
+\endgroup

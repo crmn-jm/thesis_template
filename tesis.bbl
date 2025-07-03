@@ -1,0 +1,16 @@
+\begin{thebibliography}{1}
+
+\bibitem{tesis}
+C.~Jimenez-Mesa, {\em Enhancing diagnostic accuracy in neuroimaging through
+  machine learning: advancements in statistical classification and mapping}.
+\newblock Universidad de Granada, 2023.
+\newblock URI: https://hdl.handle.net/10481/85701.
+
+\bibitem{JimenezMesa2020}
+C.~Jimenez-Mesa, I.~A. Illan, A.~Martin-Martin, D.~Castillo-Barnes, F.~J.
+  Martinez-Murcia, J.~Ramirez, and J.~M. Gorriz, ``Optimized one vs one
+  approach in multiclass classification for early {A}lzheimer's disease and
+  {M}ild {C}ognitive {I}mpairment diagnosis,'' {\em {IEEE} Access}, vol.~8,
+  pp.~96981--96993, 2020.
+
+\end{thebibliography}

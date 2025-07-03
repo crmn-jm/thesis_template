@@ -1,0 +1,105 @@
+\input{Setup/configuration}
+
+%[htbp]: here (h), top (t), bottom (b), top of next page (p). With [H], you tell LaTeX to put the image exactly there. To use [H] you have to load the {float} package.
+
+% To search for faults in a character, if you don't know what it is, you can apply the following:
+%\DeclareUnicodeCharacter{0301}{*************************************}
+
+
+\begin{document}
+\dominitoc
+
+\pagenumbering{roman}
+
+%%%%%% Si estuviera en español
+%\renewcommand{\listtablename}{Índice de tablas} 
+%\renewcommand{\tablename}{Tabla}
+
+%%%%%%%%%%%%%%%%%
+%% FRONT COVER AND SIMILAR
+%%%%%%%%%%%%%%%%%
+\frontmatter
+\begingroup
+\input{Frontback/cover}
+\cleardoublepage
+\input{Frontback/backcover}
+\clearpage
+\input{Frontback/Information}
+\cleardoublepage
+\input{Frontback/dedication}
+
+\input{Frontback/Acknowledgements}
+\cleardoublepage
+
+\input{Frontback/Abstract}
+\cleardoublepage
+\input{Frontback/Resumen}
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%
+%% INDEX
+%%%%%%%%%%%%%%%%%
+
+%\pagestyle{plain}
+\pdfbookmark[0]{\contentsname}{tableofcontents}
+%\renewcommand{\contentsname}{CONTENTS}
+\tableofcontents
+\cleardoublepage
+\pdfbookmark[0]{\listfigurename}{lof}
+%\renewcommand{\listfigurename}{LIST OF FIGURES}
+\listoffigures 
+\cleardoublepage
+\pdfbookmark[0]{\listtablename}{lot}
+%\renewcommand{\listtablename}{ LIST OF TABLES}
+\listoftables
+\cleardoublepage
+\input{Frontback/glosario}
+\cleardoublepage
+%{\listoftables \let\cleardoublepage\clearpage \printglossary[type=\acronymtype, title=Acrónimos ]}
+%\printglossary[type=\acronymtype, title=ACRONYMS]
+\endgroup
+
+%%%%%%%%%%%%%%%%%
+%% CONTENT
+%%%%%%%%%%%%%%%%%
+\mainmatter
+\pagenumbering{arabic}
+\setlength{\parskip}{5pt}
+
+\part{Fundamentals}\label{part1}
+\input{Chapters/chap_01} % Introduction
+\input{Chapters/chap_02} % Fundamentals
+%\input{Chapters/chap_03}
+%\input{Chapters/chap_03_2}
+%\input{Chapters/chap_03_3}
+
+\part{Contributions of this thesis}\label{part2}
+\input{Chapters/chap_04} 
+%\input{Chapters/chap_05} 
+%\input{Chapters/chap_06} 
+
+\part{General discussion and conclusions}\label{part3}
+\input{Chapters/chap_09}
+%\input{Chapters/chap_10}
+
+%%%%%%%%%%%%%%%%%
+%% APENDIX
+%%%%%%%%%%%%%%%%%
+\appendix
+\part{Appendix}
+\include{Chapters/apen_01}
+
+
+%%%%%%%%%%%%%%%%%
+%% BIBLIOGRAPHY
+%%%%%%%%%%%%%%%%%
+
+
+%\nocite{*}
+\bibliographystyle{ieeetr}
+\bibliography {Biblio/refs_tesis}
+\addcontentsline{toc}{part}{Bibliography}
+
+
+
+\end{document}
